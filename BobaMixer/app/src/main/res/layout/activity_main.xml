@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#FFF3E0">
+
+    <ImageView
+        android:id="@+id/logoImage"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:background="#00FFFFFF"
+        android:src="@drawable/bubble"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/baseLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Choose Your Tea Base:"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/logoImage"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="20dp" />
+
+    <Spinner
+        android:id="@+id/baseSpinner"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/baseLabel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp" />
+
+    <TextView
+        android:id="@+id/toppingLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select Toppings:"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/baseSpinner"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="20dp" />
+
+    <CheckBox
+        android:id="@+id/toppingBoba"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Boba Pearls"
+        app:layout_constraintTop_toBottomOf="@id/toppingLabel"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="4dp" />
+
+    <CheckBox
+        android:id="@+id/toppingJelly"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fruit Jelly"
+        app:layout_constraintTop_toBottomOf="@id/toppingBoba"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <CheckBox
+        android:id="@+id/toppingPudding"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Egg Pudding"
+        app:layout_constraintTop_toBottomOf="@id/toppingJelly"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/flavorLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pick a Flavor:"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/toppingPudding"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="20dp" />
+
+    <RadioGroup
+        android:id="@+id/flavorGroup"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/flavorLabel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp">
+
+        <RadioButton
+            android:id="@+id/flavorStrawberry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Strawberry" />
+
+        <RadioButton
+            android:id="@+id/flavorMatcha"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Matcha" />
+
+        <RadioButton
+            android:id="@+id/flavorMango"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mango" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/mixButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Mix My Drink!"
+        android:backgroundTint="#FF9800"
+        android:textColor="#FFFFFF"
+        app:layout_constraintTop_toBottomOf="@id/flavorGroup"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp" />
+
+    <TextView
+        android:id="@+id/resultText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="#444444"
+        app:layout_constraintTop_toBottomOf="@id/mixButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
